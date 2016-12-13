@@ -1,0 +1,198 @@
+/**********  Creating Font Families  *************/
+
+@font-face {
+	font-family: zeroReg;
+	src: url(../fonts/ZerocalcareBlackletter.ttf);
+}
+
+@font-face {
+	font-family: zeroCurs;
+	src: url(../fonts/ZerocalcareScript.ttf);
+}
+
+/**************  Base Styles  ****************/
+
+body {
+	background-color: #312e36;
+}
+
+.wrapper {
+	width: 100%;
+	margin: auto;
+}
+
+.container {
+	margin: auto;
+}
+
+#main_logo {
+	margin: 15px auto;
+	height: 400px;
+	max-width: 80%;
+	text-align: center;
+}
+
+#simple_logo {
+	display: none;
+}
+
+#icon_logo {
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	box-shadow: 0 0 10px white, 0 0 15px rgba(13, 41, 209, 1);
+}
+
+.about {
+	width: 95%;
+	margin: auto;
+}
+
+li {
+	list-style-type: circle;
+	font-size: 1em;
+}
+
+p {
+	font-size: 2em;
+	text-indent: 25px;
+}
+
+.col {
+	margin: 15px auto;
+	width: 80%;
+}
+
+h1 {
+	font-family: zeroCurs;
+	font-size: 3em;
+	color: #00a200;
+	margin-top: -15px;
+}
+
+p, ul, li, span, a {
+	font-family: zeroReg;
+	color: white;
+}
+
+span, ul {
+	font-size: 2em;
+	color: #2fed10;
+}
+
+hr { 
+	color: rgba(13, 41, 209, 1); 
+} 
+
+a {
+	padding: 0 5px;
+	border-radius: 12px;
+}
+
+#projects {
+	width: 100%;
+}
+
+#projects li {
+	list-style: none;
+	margin: 20px auto;
+	text-align: center;
+}
+
+#projects li a {
+	margin: auto;
+	display: inline-block;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background: center;
+	height: 150px;
+	width: 225px;
+}
+
+#projects li a[href*="jacquelin"] {
+	background-image: url(../images/jackielogo.png);
+}
+
+.footer li {
+	list-style: none;
+	font-size: .75em;
+	margin-left: 16px;
+}
+
+.footer div {
+	width: 90%;
+	margin: auto;
+	text-align: center;
+}
+
+/***********************    Wider Screens / Desktop PCs    ***********************/
+
+@media screen and (min-width: 720px) {
+
+	#main_logo {
+		margin-bottom: -75px;
+	}
+
+	#icon_logo {
+		display:none;
+	}
+
+	#simple_logo {
+		height: 40%;
+		width: 100%;
+		display:block;
+		border-radius: 125px;
+		box-shadow: 0 0 10px white, 0 0 15px rgba(13, 41, 209, 1);
+	}
+
+	p, ul, li, a {
+		font-size: 1.5em;
+	}
+
+	h1 {
+		font-size: 5em;
+	}
+
+	.about {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.about p {
+		font-size: 2em;
+	}
+
+	.col {
+		width: 50%;
+	}
+
+	.col span, p, ul {
+		margin: 10px;
+	}
+
+	#projects {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	#projects a {
+		display: inherit;
+	}
+
+	.footer ul {
+		display: flex;
+		flex-direction: row;
+	}
+
+	a {
+		box-shadow: none;
+		transition: box-shadow 700ms;
+	}
+
+	a:hover {
+		box-shadow: 0 0 10px white, 0 0 15px rgb(13, 41, 209);
+		transition: box-shadow 700ms;
+	}
+}
