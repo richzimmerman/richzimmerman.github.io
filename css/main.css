@@ -119,10 +119,13 @@ a {
 	margin-left: 16px;
 }
 
-.footer div {
+#footer_container {
 	width: 90%;
 	margin: auto;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 /***********************    Wider Screens / Desktop PCs    ***********************/
@@ -179,6 +182,10 @@ a {
 
 	#projects a {
 		display: inherit;
+	}
+
+	#footer_container {
+		display: block;
 	}
 
 	.footer ul {
