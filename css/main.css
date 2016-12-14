@@ -100,7 +100,8 @@ a {
 }
 
 #projects li a {
-	margin: auto;
+	margin: 10px auto;
+	position: relative;
 	display: inline-block;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -111,6 +112,19 @@ a {
 
 #projects li a[href*="jacquelin"] {
 	background-image: url(../images/jackielogo.png);
+}
+
+#projects li a[href*="metrics-report-app"] {
+	background-image: url(../images/metrics-reporting-app.png);
+}
+
+.caption {
+	font-size: 1.5em;
+	position: absolute;
+	bottom: -35px;
+	left: 0;
+	width: 100%;
+	text-align: center;
 }
 
 #footer_container {
@@ -186,6 +200,10 @@ a {
 
 	#projects a {
 		display: inherit;
+	}
+
+	.caption {
+		font-size: .7em;
 	}
 
 	#footer_container {
