@@ -91,6 +91,7 @@ a {
 
 #projects {
 	width: 100%;
+	margin-bottom: 45px;
 }
 
 #projects li {
@@ -196,6 +197,7 @@ a {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
+		margin-bottom: 25px;
 	}
 
 	#projects a {
