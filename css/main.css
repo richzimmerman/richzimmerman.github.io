@@ -117,6 +117,12 @@ a {
 
 #projects li a[href*="metrics-report-app"] {
 	background-image: url(../images/metrics-reporting-app.png);
+	background-size: cover;
+}
+
+#projects li a[href*="nostalgic"] {
+	background-image: url(../images/calc.png);
+	background-size: cover;
 }
 
 .caption {
