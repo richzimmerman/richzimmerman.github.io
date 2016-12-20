@@ -68,7 +68,7 @@ body {
 }
 
 .about {
-	width: 95%;
+	width: 90%;
 	margin: auto;
 }
 
@@ -246,12 +246,12 @@ a {
 	#projects a {
 		display: inherit;
 		box-shadow: none;
-		transition: box-shadow 700ms;
+		transition: box-shadow 500ms;
 	}
 
 	#projects a:hover {
 		box-shadow: 0 0 10px white, 0 0 15px rgb(13, 41, 209);
-		transition: box-shadow 700ms;
+		transition: box-shadow 300ms;
 	}
 
 	.caption {
@@ -293,7 +293,7 @@ a {
 	}
 
 	#main_logo {
-		margin-top: -90px;
+		margin-top: -40px;
 		border-radius: 15px;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -304,8 +304,18 @@ a {
 		display:none;
 	}
 
+	#nav {
+		position: absolute;
+		width: 100%;
+		height: 50px;
+		top: 0;
+	}
+
 	#nav a {
+		margin-left: -40px;
+		background-color: #312e36;
 		font-size: 35px;
+		text-decoration: underline;
 	}
 
 	.secondary-container {
