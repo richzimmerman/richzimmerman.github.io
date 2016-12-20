@@ -27,12 +27,12 @@ body {
 
 #main_logo {
 	margin: 15px auto;
-	height: 400px;
 	max-width: 80%;
 	text-align: center;
 }
 
-#simple_logo {
+#simple_logo,
+#code-image {
 	display: none;
 }
 
@@ -43,9 +43,41 @@ body {
 	box-shadow: 0 0 10px white, 0 0 15px rgba(13, 41, 209, 1);
 }
 
+#nav {
+	margin: 25px auto;
+}
+
+#nav a {
+	margin: 1px 0;
+	border-radius: 0;
+	background-color: #45424a;
+	text-decoration: none;
+	font-size: 65px;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+}
+
+#nav a:active,
+#nav a:hover {
+	background-color: #5a575e;
+}
+
+#nav a:visited {
+	color: white;
+}
+
 .about {
 	width: 95%;
 	margin: auto;
+}
+
+.about ul {
+	margin-left: 30px;
+}
+
+.lang-img {
+	display: none;
 }
 
 li {
@@ -65,14 +97,18 @@ p {
 
 h1 {
 	font-family: zeroCurs;
-	font-size: 3em;
-	color: #00a200;
-	margin-top: -15px;
 }
 
-p, ul, li, span, a {
-	font-family: zeroReg;
+p, ul, li, span, a, #name, #title {
+	font-family: 'zeroReg';
 	color: white;
+}
+
+#name, #title {
+	display: none;
+	font-size: 200px;
+	color: #2fed10;
+	text-shadow: 8px 8px 0 rgba(13, 41, 209, 0.6);
 }
 
 span, ul {
@@ -125,10 +161,16 @@ a {
 	background-size: cover;
 }
 
+#projects li a[href*="mOQwrq"] {
+	background-image: url(../images/meme.png);
+	background-size: cover;
+}
+
 .caption {
 	font-size: 1.5em;
 	position: absolute;
-	bottom: -35px;
+	top: 150px;
+	bottom: 0;
 	left: 0;
 	width: 100%;
 	text-align: center;
@@ -150,27 +192,31 @@ a {
 .footer li {
 	list-style: none;
 	font-size: .75em;
-	margin-left: 16px;
+	margin-top: 20px;
 }
+
 
 /***********************    Wider Screens / Desktop PCs    ***********************/
 
 @media screen and (min-width: 720px) {
 
-	#main_logo {
-		margin-bottom: -75px;
+	#title {
+		margin-bottom: 100px;
+		border-radius: 15px;
 	}
 
-	#icon_logo {
-		display:none;
+	#nav {
+		height: 80px;
+		width: 80%;
+		display: flex;
+		justify-content: space-around;
 	}
 
-	#simple_logo {
-		height: 40%;
-		width: 100%;
-		display:block;
-		border-radius: 125px;
-		box-shadow: 0 0 10px white, 0 0 15px rgba(13, 41, 209, 1);
+	#nav a {
+		font-size: 2em;
+		width: 20%;
+		display: inline-block;
+		border-radius: 10px;
 	}
 
 	p, ul, li, a {
@@ -182,21 +228,12 @@ a {
 	}
 
 	.about {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+		width: 90%;
+		margin: 30px auto;
 	}
 
 	.about p {
 		font-size: 2em;
-	}
-
-	.col {
-		width: 50%;
-	}
-
-	.col span, p, ul {
-		margin: 10px;
 	}
 
 	#projects {
@@ -208,6 +245,13 @@ a {
 
 	#projects a {
 		display: inherit;
+		box-shadow: none;
+		transition: box-shadow 700ms;
+	}
+
+	#projects a:hover {
+		box-shadow: 0 0 10px white, 0 0 15px rgb(13, 41, 209);
+		transition: box-shadow 700ms;
 	}
 
 	.caption {
@@ -216,20 +260,73 @@ a {
 
 	#footer_container {
 		display: block;
+		font-size: 1.2em;
 	}
 
 	.footer ul {
+		margin-top: 25px;
+		width: 80%;
 		display: flex;
 		flex-direction: row;
+		justify-content: space-between;
 	}
 
-	a {
-		box-shadow: none;
-		transition: box-shadow 700ms;
+	.footer li {
+		margin-top: 25px;
+		transition: all .1s;
 	}
 
-	a:hover {
-		box-shadow: 0 0 10px white, 0 0 15px rgb(13, 41, 209);
-		transition: box-shadow 700ms;
+	.footer li:hover {
+		transform: scale(1.05);
 	}
+	
+}
+
+@media screen and (min-width: 1200px) {
+
+	#name, #title {
+		display: block;
+	}
+
+	#title {
+		margin-bottom: 30px;
+	}
+
+	#main_logo {
+		margin-top: -90px;
+		border-radius: 15px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: url(../images/code.png);
+	}
+
+	#icon_logo {
+		display:none;
+	}
+
+	#nav a {
+		font-size: 35px;
+	}
+
+	.secondary-container {
+		margin-top: 15px;
+		width: 90%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.lang-img {
+		text-align: right;
+		display: block;
+	}
+
+	.lang-img img {
+		margin-top: 15px;
+		margin-left: 25px;
+		display: inline-block;
+		width: 270px;
+		height: 160px;
+	}
+
 }

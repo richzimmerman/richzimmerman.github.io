@@ -7,6 +7,7 @@
 		<link rel="icon" href="./images/icon.ico">
 		<link rel="stylesheet" type="text/css" href="./css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</head>
 	<body>
 	<div class="wrapper">
@@ -14,38 +15,62 @@
 		<div class="container">
 			<div id="main_logo">
 				<img id="icon_logo" src="./images/iconlogo.png">
-				<img id="simple_logo" src="./images/simplifiedlogo1.png">
+				<h1 id="name">Rich Zimmerman</h1>
 				<h1 id="title">WEB DEVELOPER</h1>
+			</div>
+			<div id="nav">
+				<a href="#about">About</a>
+				<a href="#languages">Languages</a>
+				<a href="#projects">Projects</a>
+				<a href="#git">Github/Online Presence</a>
 			</div>
 		</div><hr>
 		<!-- About Me / Languages Container -->
 		<div class="container about">
-			<div class="col1 col">
+			<div name="about" class="">
 				<span>About me :</span>
 				<p>I've been teaching myself to code since May of 2O15 with Treehouse. Starting out, I focused primarily on front end web development with HTML, CSS and Javascript but have recently been getting into back end as well. I've gone through the entirety of the Full Stack Javascript course where I've learned to build MEAN stack, dynamic, single paged web applications - which is where my focus is starting to shift to.</p>
 				<p>I have a strong interest in all things technology related. Web development especially has been a bit of an obsession of mine, but I've also taught myself a lot about hardware and I've worked a little bit in IT as a support technician for a few months.</p>
 			</div>
-			<div class="col2 col">
-				<span>Programming Languages :</span>
-				<ul id="languages">
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>Javascript</li>
-					<li>jQuery</li>
-					<li>MEAN Stack Javascript: MongoDB, ExpressJS, AngularJS and NodeJS</li>
-				</ul>
-				<span>Other Languages I Am Not Wholly Comfortable With :</span>
-				<ul>
-					<li>PHP</li>
-					<li>SQL</li>
-					<li>Java</li>
-					<li>Android Development</li>
-				</ul>
+		</div><hr>
+		<div class="about">
+			<div name="languages" class="languages-container">
+				<div class="secondary-container">
+					<div class="lang-col">
+						<span>Programming Languages :</span>
+						<ul id="languages">
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>Javascript</li>
+							<li>jQuery</li>
+							<li>MEAN Stack Javascript: MongoDB, ExpressJS, AngularJS and NodeJS</li>
+						</ul>
+					</div>
+					<div class="lang-col lang-img">
+						<img src="./images/htmlcssjs.png">
+						<img src="./images/mean-graphic.png">
+					</div>
+				</div>
+				<div class="secondary-container">
+					<div class="lang-col">
+						<span>Other Languages I've Experimented With :</span>
+						<ul>
+							<li>PHP</li>
+							<li>SQL</li>
+							<li>Java</li>
+							<li>Android Development</li>
+						</ul>
+					</div>
+					<div class="lang-col lang-img">
+						<img src="./images/php.png">
+						<img src="./images/java.png">
+					</div>
+				</div>
 			</div>
 		</div><hr>
 		<!-- Projects Container -->
 		<div class="container">
-			<div id="projects">
+			<div name="projects" id="projects">
 				<li>
 					<a href="http://jacquelinmichaelfoto.com">
 						<span class="caption">Commercial Photography Website</span>
@@ -58,27 +83,41 @@
 				</li>
 				<li>
 					<a href="http://www.rich-zimmerman.com/nostalgicalculator/">
-						<span class="caption">Nostalgic Calculator App</span>
+						<span class="caption">Nostalgic Calculator App (Not Currently Mobile Friendly)</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://codepen.io/richzimmerman/pen/mOQwrq">
+						<span class="caption">Free Code Camp Project w/ Bootstrap</span>
 					</a>
 				</li>
 			</div>
 		</div><hr>
 		<!-- Contact / Links Footer Container -->
 		<div class="container footer">
-			<div id="footer_container">
+			<div name="git" id="footer_container">
 				<div>
 					<ul id="links">Links:
-						<li><a href="https://github.com/richzimmerman">GitHub Profile</a></li>
-					</ul>
-				</div>
-				<div>
-					<ul>Education/Online Learning:
-						<li><a href="http://www.teamtreehouse.com/richardzimmerman">Treehouse Profile (Primary)</a></li>
-						<li><a href="https://www.freecodecamp.com/rieldfc">Free Code Camp Profile (Practice/Recreation)</a></li>
+						<li>
+							<a class="link" href="https://github.com/richzimmerman">
+								<img class="footer-img" src="./images/github.png">
+							</a>
+						</li>
+						<li>
+							<a class="link" href="http://www.teamtreehouse.com/richardzimmerman">
+								<img class="footer-img" src="./images/treehouse.png">
+							</a>
+						</li>
+						<li>
+							<a class="link" href="https://www.freecodecamp.com/rieldfc">
+								<img class="footer-img" src="./images/freecodecamp.png">
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script type="text/Javascript" src="./src/main.js"></script>
 	</body>
 </html>
