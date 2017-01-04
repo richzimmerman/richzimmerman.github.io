@@ -1,37 +1,27 @@
 /**********  Creating Font Families  *************/
 
 @font-face {
-	font-family: zeroReg;
-	src: url(../fonts/ZerocalcareBlackletter.ttf);
+	font-family: futuraBold;
+	src: url(../fonts/futuraBold.ttf);
 }
 
 @font-face {
-	font-family: zeroCurs;
-	src: url(../fonts/ZerocalcareScript.ttf);
+	font-family: futuraBook;
+	src: url(../fonts/futuraBook.otf);
 }
 
 /**************  Base Styles  ****************/
 
 body {
-	background-color: #312e36;
-}
-
-.wrapper {
-	width: 100%;
-	margin: auto;
-}
-
-.container {
-	margin: auto;
+	padding-top: 30px;
+	background-color: #312e36 !important;
 }
 
 #main_logo {
-	margin: 15px auto;
-	max-width: 80%;
+	max-width: 100%;
 	text-align: center;
 }
 
-#simple_logo,
 #code-image {
 	display: none;
 }
@@ -43,28 +33,25 @@ body {
 	box-shadow: 0 0 10px white, 0 0 15px rgba(13, 41, 209, 1);
 }
 
+#header {
+	width: 100%;
+	padding: 0;
+}
+
 #nav {
-	margin: 25px auto;
+	margin-top: 20px;
 }
 
 #nav a {
-	margin: 1px 0;
-	border-radius: 0;
 	background-color: #45424a;
-	text-decoration: none;
-	font-size: 65px;
-	text-align: center;
-	display: inline-block;
-	width: 100%;
+	font-size: 35px;
+	padding: 5px 0;
+	border: solid 1px #312e36;
 }
 
 #nav a:active,
 #nav a:hover {
 	background-color: #5a575e;
-}
-
-#nav a:visited {
-	color: white;
 }
 
 .about {
@@ -82,7 +69,7 @@ body {
 
 li {
 	list-style-type: circle;
-	font-size: 1em;
+	font-size: 2em;
 }
 
 p {
@@ -90,166 +77,113 @@ p {
 	text-indent: 25px;
 }
 
-.col {
-	margin: 15px auto;
-	width: 80%;
-}
-
-h1 {
-	font-family: zeroCurs;
-}
-
-p, ul, li, span, a, #name, #title {
-	font-family: 'zeroReg';
+p, ul, li, span, a {
+	font-family: 'futuraBook';
 	color: white;
 }
 
 #name, #title {
+	margin: 0;
+	font-family: 'futuraBold';
 	display: none;
-	font-size: 200px;
+	font-size: 100px;
 	color: #2fed10;
-	text-shadow: 8px 8px 0 rgba(13, 41, 209, 0.6);
+	text-shadow: 6px 6px 0 rgba(13, 41, 209, 0.8);
 }
 
-span, ul {
+span {
 	font-size: 2em;
 	color: #2fed10;
 }
 
-hr { 
-	color: rgba(13, 41, 209, 1); 
-} 
-
-a {
-	padding: 0 5px;
-	border-radius: 12px;
-}
-
 #projects {
-	width: 100%;
-	margin-bottom: 45px;
+	margin: 25px 0;
 }
 
-#projects li {
-	list-style: none;
-	margin: 20px auto;
-	text-align: center;
-}
-
-#projects li a {
-	margin: 10px auto;
-	position: relative;
+#projects > div {
 	display: inline-block;
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background: center;
-	height: 150px;
-	width: 225px;
+	float: none;
 }
 
-#projects li a[href*="jacquelin"] {
-	background-image: url(../images/jackielogo.png);
+.thumbnail {
+	margin: 10px;
 }
 
-#projects li a[href*="metrics-report-app"] {
-	background-image: url(../images/metrics-reporting-app.png);
-	background-size: cover;
-}
-
-#projects li a[href*="nostalgic"] {
-	background-image: url(../images/calc.png);
-	background-size: cover;
-}
-
-#projects li a[href*="mOQwrq"] {
-	background-image: url(../images/meme.png);
-	background-size: cover;
+.thumbnail img {
+	margin-bottom: 10px;
+	height: 150px !important;
+	width: 225px !important;
 }
 
 .caption {
-	font-size: 1.5em;
+	font-size: 0.5em !important;
+	color: #2fed10 !important;
 	position: absolute;
-	top: 150px;
+	padding: 0 !important;
 	bottom: 0;
 	left: 0;
-	width: 100%;
+	right: 0;
 	text-align: center;
-}
-
-#footer_container {
-	width: 95%;
-	margin: 20px auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-}
-
-#footer_container ul {
-	padding: 0;
+	width: 100% !important;
+	background-color: #312e36;
 }
 
 .footer li {
 	list-style: none;
-	font-size: .75em;
 	margin-top: 20px;
+}
+
+.footer {
+	margin: 0 auto !important;
 }
 
 
 /***********************    Wider Screens / Desktop PCs    ***********************/
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
 
-	#title {
-		margin-bottom: 100px;
-		border-radius: 15px;
+	body {
+		padding-top: 0;
+	}
+
+	#main_logo {
+		height: 500px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: url(../images/code.jpg);
+	}
+
+	#icon_logo {
+		display:none;
+	}
+
+	#name, #title {
+		display: block;
+	}
+
+	#name {
+		margin-bottom: 60px;
 	}
 
 	#nav {
-		height: 80px;
-		width: 80%;
-		display: flex;
-		justify-content: space-around;
-	}
-
-	#nav a {
-		font-size: 2em;
-		width: 20%;
-		display: inline-block;
-		border-radius: 10px;
-	}
-
-	p, ul, li, a {
-		font-size: 1.5em;
-	}
-
-	h1 {
-		font-size: 5em;
-	}
-
-	.about {
-		width: 90%;
-		margin: 30px auto;
+		margin: 0;
 	}
 
 	.about p {
 		font-size: 2em;
 	}
 
-	#projects {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		margin-bottom: 25px;
+	.lang-img {
+		display: inline-block;
+		margin-top: 30px;
 	}
 
-	#projects a {
-		display: inherit;
+	.thumbnail {
 		box-shadow: none;
 		transition: box-shadow 500ms;
 	}
 
-	#projects a:hover {
+	.thumbnail:hover {
 		box-shadow: 0 0 10px white, 0 0 15px rgb(13, 41, 209);
 		transition: box-shadow 300ms;
 	}
@@ -258,21 +192,7 @@ a {
 		font-size: .7em;
 	}
 
-	#footer_container {
-		display: block;
-		font-size: 1.2em;
-	}
-
-	.footer ul {
-		margin-top: 25px;
-		width: 80%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
 	.footer li {
-		margin-top: 25px;
 		transition: all .1s;
 	}
 
@@ -282,61 +202,26 @@ a {
 	
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 775px) {
+	#name {
+		margin-bottom: 175px;
+	}
+}
 
-	#name, #title {
-		display: block;
+@media screen and (min-width: 830px) {
+	#name {
+		margin-bottom: 275px;
+	}
+}
+
+@media screen and (min-width: 980px) {
+
+	body {
+		padding-top: 63px;
 	}
 
-	#title {
-		margin-bottom: 30px;
-	}
-
-	#main_logo {
-		margin-top: -40px;
-		border-radius: 15px;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-image: url(../images/code.png);
-	}
-
-	#icon_logo {
-		display:none;
-	}
-
-	#nav {
-		position: absolute;
-		width: 100%;
-		height: 50px;
-		top: 0;
-	}
-
-	#nav a {
-		margin-left: -40px;
-		background-color: #312e36;
-		font-size: 35px;
-		text-decoration: underline;
-	}
-
-	.secondary-container {
-		margin-top: 15px;
-		width: 90%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-	.lang-img {
-		text-align: right;
-		display: block;
-	}
-
-	.lang-img img {
-		margin-top: 15px;
-		margin-left: 25px;
-		display: inline-block;
-		width: 270px;
-		height: 160px;
+	#name {
+		margin-bottom: 280px;
 	}
 
 }

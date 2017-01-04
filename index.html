@@ -8,36 +8,40 @@
 		<link rel="stylesheet" type="text/css" href="./css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</head>
 	<body>
 	<div class="wrapper">
 		<!-- Header Container -->
-		<div class="container">
+		<div id="header" class="container">
 			<div id="main_logo">
 				<img id="icon_logo" src="./images/iconlogo.png">
 				<h1 id="name">Rich Zimmerman</h1>
 				<h1 id="title">WEB DEVELOPER</h1>
 			</div>
-			<div id="nav">
-				<a href="#about">About</a>
-				<a href="#languages">Languages</a>
-				<a href="#projects">Projects</a>
-				<a href="#git">Github/Online Presence</a>
+			<div id="nav" class="navbar text-center">
+				<nav>
+					<a class="col-xs-12 col-sm-3" href="#about">About</a>
+					<a class="col-xs-12 col-sm-3" href="#languages">Languages</a>
+					<a class="col-xs-12 col-sm-3" href="#projects">Projects</a>
+					<a class="col-xs-12 col-sm-3" href="#git">Contact</a>
+				</nav>
 			</div>
 		</div><hr>
 		<!-- About Me / Languages Container -->
 		<div class="container about">
 			<div name="about" class="">
-				<span>About me :</span>
-				<p>I've been teaching myself to code since May of 2O15 with Treehouse. Starting out, I focused primarily on front end web development with HTML, CSS and Javascript but have recently been getting into back end as well. I've gone through the entirety of the Full Stack Javascript course where I've learned to build MEAN stack, dynamic, single paged web applications - which is where my focus is starting to shift to.</p>
-				<p>I have a strong interest in all things technology related. Web development especially has been a bit of an obsession of mine, but I've also taught myself a lot about hardware and I've worked a little bit in IT as a support technician for a few months.</p>
+				<span>About me:</span>
+				<p>I've been learning to code for almost 2 years now with a few different online sources. Starting out, I focused primarily on front end web development with HTML, CSS and Javascript but have recently been getting into back end as well. I've completed the Full Stack Javascript course where I've learned to build MEAN stack, dynamic, single paged web applications. My interest is starting to shift to the data-driven web app side of web development, but I definitely learn a lot and enjoy the challenges that come with every different type of project.</p><br>
+				<p>My wife and I have a beautiful little girl who is growing up WAY too fast. They motivate me to work as hard as I can to take care of them and make sure they're happy. We also have a crazy pit bull who seems to have unlimited amounts of energy at times. Currently my spare time is spent with my family or coding, otherwise I enjoy going to see movies, playing video games, learning new things (which is all about coding now), playing guitar, and I'm a blue belt in Brazilian Jiu-Jitsu. </p>
 			</div>
 		</div><hr>
-		<div class="about">
+		<div class="about container">
 			<div name="languages" class="languages-container">
-				<div class="secondary-container">
-					<div class="lang-col">
-						<span>Programming Languages :</span>
+				<div class="container">
+					<div class="col-xs-12 col-md-6">
+						<span>Programming Languages:</span>
 						<ul id="languages">
 							<li>HTML</li>
 							<li>CSS</li>
@@ -46,14 +50,14 @@
 							<li>MEAN Stack Javascript: MongoDB, ExpressJS, AngularJS and NodeJS</li>
 						</ul>
 					</div>
-					<div class="lang-col lang-img">
-						<img src="./images/htmlcssjs.png">
-						<img src="./images/mean-graphic.png">
+					<div class="col-md-6 lang-img container">
+						<img class="col-sm-6" src="./images/htmlcssjs.png">
+						<img class="col-sm-6" src="./images/mean-graphic.png">
 					</div>
-				</div>
-				<div class="secondary-container">
-					<div class="lang-col">
-						<span>Other Languages I've Experimented With :</span>
+				</div><hr>
+				<div class="container col-xs-12">
+					<div class="col-xs-12 col-md-6">
+						<span>Languages I've Experimented With:</span>
 						<ul>
 							<li>PHP</li>
 							<li>SQL</li>
@@ -61,60 +65,75 @@
 							<li>Android Development</li>
 						</ul>
 					</div>
-					<div class="lang-col lang-img">
-						<img src="./images/php.png">
-						<img src="./images/java.png">
+					<div class="col-md-6 lang-img container">
+						<img class="col-sm-6" src="./images/php.png">
+						<img class="col-sm-6" src="./images/java.png">
 					</div>
 				</div>
 			</div>
 		</div><hr>
 		<!-- Projects Container -->
-		<div class="container">
-			<div name="projects" id="projects">
-				<li>
-					<a href="http://jacquelinmichaelfoto.com">
-						<span class="caption">Commercial Photography Website</span>
-					</a>
-				</li>
-				<li>
-					<a href="http://www.rich-zimmerman.com/metrics-report-app/">
-						<span class="caption">Angular Speadsheet Style App</span>
-					</a>
-				</li>
-				<li>
-					<a href="http://www.rich-zimmerman.com/nostalgicalculator/">
-						<span class="caption">Nostalgic Calculator App (Not Currently Mobile Friendly)</span>
-					</a>
-				</li>
-				<li>
-					<a href="http://codepen.io/richzimmerman/pen/mOQwrq">
-						<span class="caption">Free Code Camp Project w/ Bootstrap</span>
-					</a>
-				</li>
+		<div class="container text-center">
+			<div name="projects" id="projects" class="col-xs-12 text-center">
+				<div class="col-xs-8 col-sm-6 col-md-3">
+					<li class="thumbnail">
+						<a href="http://jacquelinmichaelfoto.com">
+							<img class ="" src="./images/jackielogo.png">
+							<span class="caption">Commercial Photography Website</span>
+						</a>
+					</li>
+				</div>
+				<div class="col-xs-8 col-sm-6 col-md-3">
+					<li class="thumbnail">
+						<a href="http://www.rich-zimmerman.com/metrics-report-app/">
+							<img class="" src="./images/metrics-reporting-app.png">
+							<span class="caption">Angular Speadsheet Style App</span>
+						</a>
+					</li>
+				</div>
+				<div class="col-xs-8 col-sm-6 col-md-3">
+					<li class="thumbnail">
+						<a href="http://www.rich-zimmerman.com/nostalgicalculator/">
+							<img src="./images/calc.png">
+							<span class="caption">Nostalgic Calculator App</span>
+						</a>
+					</li>
+				</div>
+				<div class="col-xs-8 col-sm-6 col-md-3">
+					<li class="thumbnail">
+						<a href="http://www.rich-zimmerman.com/gw2-dailies">
+							<img src="./images/gw2.png">
+							<span class="caption">Daily Achievements App for Guild Wars 2 (Video Game)</span>
+						</a>
+					</li>
+				</div>
 			</div>
 		</div><hr>
 		<!-- Contact / Links Footer Container -->
 		<div class="container footer">
-			<div name="git" id="footer_container">
-				<div>
-					<ul id="links">Links:
-						<li>
+			<div name="git" id="footer_container" class="">
+					<ul class="col-xs-12 text-center" id="links">
+						<li class="col-xs-12 col-sm-6 col-md-3">
 							<a class="link" href="https://github.com/richzimmerman">
 								<img class="footer-img" src="./images/github.png">
 							</a>
 						</li>
-						<li>
+						<li class="col-xs-12 col-sm-6 col-md-3">
 							<a class="link" href="http://www.teamtreehouse.com/richardzimmerman">
 								<img class="footer-img" src="./images/treehouse.png">
 							</a>
 						</li>
-						<li>
-							<a class="link" href="https://www.freecodecamp.com/rieldfc">
+						<li class="col-xs-12 col-sm-6 col-md-3">
+							<a class="link" href="https://www.freecodecamp.com/richzimmerman">
 								<img class="footer-img" src="./images/freecodecamp.png">
 							</a>
 						</li>
+						<li class="col-xs-12 col-sm-6 col-md-3">
+							<a class="link" href="mailto:rich.zimmerman@gmail.com">
+								<img class="footer-img" src="./images/Gmail-icon.png">
+							</a>
+						</li>
 					</ul>
-				</div>
 			</div>
 		</div>
 	</div>
