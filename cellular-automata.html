@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Rich Zimmerman | Web Developer</title>
+		<link rel="icon" href="./images/icon.ico">
+		<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="nav" class="navbar text-center">
+			<nav>
+				<a class="col-xs-12 col-sm-6" href="index.html">Home</a>
+				<a class="col-xs-12 col-sm-6" href="http://www.rich-zimmerman.com/cellular-automaton">The Project</a>
+			</nav>
+		</div>
+		<div id="project-description" class="container">
+			<h1 class="text-center col-xs-12">Elementary Cellular Automaton</h1>
+			<p>One of the YouTube channels I subscribe to, a Swedish JavaScript developer by the name of <a href="https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q">Mattias Petter Johansson</a>, created this Cellular Automaton in one of his videos. I thought it was pretty cool and added a little bit to it. In the video, they hardcode one single rule and it's a set color. What I decided to add was a way to input any of the 256 rule numbers and have it generate that pattern. I also added a function to change the RGB value for every active-state cell, incrementing by one with each new active cell.</p>
+			<p>Basically what's going on is each cell has one of two states: active or inactive, active being the colored cell and inactive being white. Each cell's state is determined by the states of the 3 cells above it: immediately above, above to the left, and above to the right. The first inital row is generated randomly so you have a general pattern but it's still a random pattern each time you'd run the same rule. So you have 2 possibilites for each cell, 8 possibilities for each rule, making 256 rules. Thankfully 1 and 0 equte to True and False in JavaScript or typing in all 256 rules would have taken much longer than it already did.</p>
+			<p>A detailed explanation on Cellular Automaton can be found <a href="http://mathworld.wolfram.com/CellularAutomaton.html">here</a>.</p>
+		</div>
+		<div class="container text-center">
+			<img class="col-xs-10 col-xs-offset-1 project-img" src="./images/automaton.png">
+		</div>
+		<script>
+			$(document).ready(function(){
+				if ($(window).width() >= 975) {
+					$("#nav").toggleClass("navbar-fixed-top");
+				}
+			});
+
+			$(window).resize(function(){
+				if ($(window).width() < 975) {
+					$("#nav").toggleClass("navbar-fixed-top");
+				}
+			});
+		</script>
+	</body>
+</html>

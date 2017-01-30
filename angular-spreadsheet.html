@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Rich Zimmerman | Web Developer</title>
+		<link rel="icon" href="./images/icon.ico">
+		<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="nav" class="navbar text-center">
+			<nav>
+				<a class="col-xs-12 col-sm-6" href="index.html">Home</a>
+				<a class="col-xs-12 col-sm-6" href="http://www.rich-zimmerman.com/metrics-report-app">The Project</a>
+			</nav>
+		</div>
+		<div id="project-description" class="container">
+			<h1 class="text-center col-xs-12">Metrics Reporting Spreadsheet App</h1>
+			<p>This is a fairly basic MEAN stack web app that I made as a prototype for another project I'm working on at my current role at Amazon.</p>
+			<p>This is my first project using the MEAN stack so it's pretty rough and incomplete, but also important as it helped solidify my understanding of the basics of the MEAN stack - like Express routing and REST APIs, Angular directives, and MongoDB data structuring and collections.</p>
+			<p>The database would be setup with a collection for each region, and an Object of data for each site. The cells are setup in such a way that when data is enterred, it saves only the data in the column enterred. The idea is that only one person would be enterring data at each site, so when you have multiple users enterring data on the app at the same time, there are no conflicts thanks to the non-blocking nature of NodeJS (Except, of course, unless you have 2 or more people enterring data for the same site at the same time).</p>
+		</div>
+		<div class="container text-center">
+			<img class="col-xs-10 col-xs-offset-1 project-img" src="./images/metrics-reporting-app-big.png">
+		</div>
+		<script>
+			$(document).ready(function(){
+				if ($(window).width() >= 975) {
+					$("#nav").toggleClass("navbar-fixed-top");
+				}
+			});
+
+			$(window).resize(function(){
+				if ($(window).width() < 975) {
+					$("#nav").toggleClass("navbar-fixed-top");
+				}
+			});
+		</script>
+	</body>
+</html>

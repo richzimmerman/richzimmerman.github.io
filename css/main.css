@@ -225,3 +225,23 @@ span {
 	}
 
 }
+
+/* Additional styles for Project Pages */
+#project-description p {
+	margin-top: 20px;
+	color: white;
+}
+
+#project-description h1 {
+	font-size: 4em;
+	margin-bottom: 50px;
+	color: #2fed10;
+	font-family: 'futuraBold';
+}
+
+.project-img {
+	margin: 40px auto;
+	padding: 0 !important;
+	box-shadow: 0 0 10px white, 0 0 15px rgb(13, 41, 209);
+	border-radius: 35px;
+}

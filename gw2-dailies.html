@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Rich Zimmerman | Web Developer</title>
+		<link rel="icon" href="./images/icon.ico">
+		<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="nav" class="navbar text-center">
+			<nav>
+				<a class="col-xs-12 col-sm-6" href="index.html">Home</a>
+				<a class="col-xs-12 col-sm-6" href="http://www.rich-zimmerman.com/gw2-dailies">The Project</a>
+			</nav>
+		</div>
+		<div id="project-description" class="container">
+			<h1 class="text-center col-xs-12">Daily Achievements App for Guild Wars 2</h1>
+			<p>While working through the courses on Free Code Camp, I was working on multiple projects focusing on AJAX requests with public APIs. I'm an avid gamer and Guild Wars 2 player, I also know they have public APIs that the community can use to create web applications so I decided to create one for myself.</p>
+			<p>This app uses 3 different API end points to gather all of the data to display the daily achievement tasks and their descriptions for both today and tomorrow.</p>
+		</div>
+		<div class="container text-center">
+			<img class="col-xs-10 col-xs-offset-1 project-img" src="./images/gw2.png">
+		</div>
+		<script>
+			$(document).ready(function(){
+				if ($(window).width() >= 975) {
+					$("#nav").toggleClass("navbar-fixed-top");
+				}
+			});
+
+			$(window).resize(function(){
+				if ($(window).width() < 975) {
+					$("#nav").toggleClass("navbar-fixed-top");
+				}
+			});
+		</script>
+	</body>
+</html>
