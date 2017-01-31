@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Rich Zimmerman | Web Developer</title>
+		<link rel="icon" href="./images/icon.ico">
+		<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="nav" class="navbar text-center">
+			<nav>
+				<a class="col-xs-12 col-sm-6" href="index.html">Home</a>
+				<a class="col-xs-12 col-sm-6" href="https://node-ticker.herokuapp.com/">The Project</a>
+			</nav>
+		</div>
+		<div id="project-description" class="container">
+			<h1 class="text-center col-xs-12">Dynamic Slideshow App</h1>
+			<p>This is a replication of a small side project I was asked to work on at my current role at Amazon. The idea is was to create a ticker at the bottom, displaying the weather and some other data while displaying a slideshow above it of recent events, newsletters, or whatever you would want.</p>
+			<p>The real life project only uses HTML, CSS, and client-side JavaScript to pull weather data from a public API and displays images dynamically, reading from a local directory with some jQuery and JS filtering tricks. So to change the images displayed, you only need to replace the files in the directory - no need to alter any code.</p>
+			<p>This project essentially does the exact same thing. The difference is this one is made with NodeJS, for a couple reasons. I haven't used Heroku yet, so this was a learning experience with that. I also don't have any actual NodeJS projects hosted yet. The Angular Metrics app is a MEAN stack app, but I only hosted the code on GitHub so it's just a static page with no server-side functionality. Node's FileSystem also made the slideshow MUCH easier to create than trying to use client-side JavaScript.</p>
+			<p>The weather ticker is in there, but Heroku wasn't happy about trying to connect with HTTP, so I just hard coded some texted.</p>
+		</div>
+		<div class="container text-center">
+			<img class="col-xs-10 col-xs-offset-1 project-img" src="./images/slideshow.png">
+		</div>
+		<script>
+			$(document).ready(function(){
+				if ($(window).width() >= 975) {
+					$("#nav").toggleClass("navbar-fixed-top");
+				}
+			});
+
+			$(window).resize(function(){
+				if ($(window).width() < 975) {
+					$("#nav").toggleClass("navbar-fixed-top");
+				}
+			});
+		</script>
+	</body>
+</html>
